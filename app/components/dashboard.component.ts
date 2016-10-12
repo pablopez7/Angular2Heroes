@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { Hero }        from './hero';
-import { HeroService } from './hero.service';
+import { Hero }        from '../models/hero';
+import { HeroService } from '../services/hero.service';
 
 @Component({
   moduleId: module.id,
   selector: 'my-dashboard',
-  templateUrl: 'dashboard.component.html',
-  styleUrls: [ 'dashboard.component.css' ]
+  templateUrl: '../views/dashboard.component.html',
+  styleUrls: [ '../assest/css/dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
@@ -28,10 +28,3 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(link);
   }
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var hero_service_1 = require('./hero.service');
+var hero_service_1 = require('../services/hero.service');
 var DashboardComponent = (function () {
     function DashboardComponent(router, heroService) {
         this.router = router;
@@ -30,17 +30,12 @@ var DashboardComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            templateUrl: '../views/dashboard.component.html',
+            styleUrls: ['../assest/css/dashboard.component.css']
         }), 
         __metadata('design:paramtypes', [router_1.Router, hero_service_1.HeroService])
     ], DashboardComponent);
     return DashboardComponent;
 }());
 exports.DashboardComponent = DashboardComponent;
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/ 
 //# sourceMappingURL=dashboard.component.js.map

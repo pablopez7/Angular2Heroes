@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var Observable_1 = require('rxjs/Observable');
 var Subject_1 = require('rxjs/Subject');
-var hero_search_service_1 = require('./hero-search.service');
+var hero_search_service_1 = require('../services/hero-search.service');
 var HeroSearchComponent = (function () {
     function HeroSearchComponent(heroSearchService, router) {
         this.heroSearchService = heroSearchService;
@@ -45,8 +45,8 @@ var HeroSearchComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'hero-search',
-            templateUrl: 'hero-search.component.html',
-            styleUrls: ['hero-search.component.css'],
+            templateUrl: '../views/hero-search.component.html',
+            styleUrls: ['../assest/css/hero-search.component.css'],
             providers: [hero_search_service_1.HeroSearchService]
         }), 
         __metadata('design:paramtypes', [hero_search_service_1.HeroSearchService, router_1.Router])

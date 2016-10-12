@@ -6,12 +6,14 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { RouterModule }  from '@angular/router';
 
+
+import { HeroService }          from './services/hero.service';
+
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroService }          from './hero.service';
-import { HeroSearchComponent }  from './hero-search.component';
+import { DashboardComponent }   from './components/dashboard.component';
+import { HeroesComponent }      from './components/heroes.component';
+import { HeroDetailComponent }  from './components/hero-detail.component';
+import { HeroSearchComponent }  from './components/hero-search.component';
 
 @NgModule({
   imports: [
@@ -45,17 +47,8 @@ import { HeroSearchComponent }  from './hero-search.component';
     HeroesComponent,
     HeroSearchComponent
   ],
-  providers: [
-    HeroService,
-  ],
+  providers: [ HeroService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

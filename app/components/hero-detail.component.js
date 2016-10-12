@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
-var hero_service_1 = require('./hero.service');
+var hero_service_1 = require('../services/hero.service');
 var HeroDetailComponent = (function () {
     function HeroDetailComponent(heroService, route, location) {
         this.heroService = heroService;
@@ -38,17 +38,12 @@ var HeroDetailComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-hero-detail',
-            templateUrl: 'hero-detail.component.html',
-            styleUrls: ['hero-detail.component.css']
+            templateUrl: '../views/hero-detail.component.html',
+            styleUrls: ['../assest/css/hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
     ], HeroDetailComponent);
     return HeroDetailComponent;
 }());
 exports.HeroDetailComponent = HeroDetailComponent;
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/ 
 //# sourceMappingURL=hero-detail.component.js.map
