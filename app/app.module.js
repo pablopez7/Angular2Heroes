@@ -16,6 +16,7 @@ var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('./services/hero.service');
 var app_component_1 = require('./app.component');
+var home_component_1 = require('./components/home.component');
 var dashboard_component_1 = require('./components/dashboard.component');
 var heroes_component_1 = require('./components/heroes.component');
 var hero_detail_component_1 = require('./components/hero-detail.component');
@@ -36,6 +37,10 @@ var AppModule = (function () {
                         pathMatch: 'full'
                     },
                     {
+                        path: 'home',
+                        component: home_component_1.HomeComponent
+                    },
+                    {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
                     },
@@ -51,6 +56,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                home_component_1.HomeComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,

@@ -10,7 +10,7 @@ import { Hero } from '../models/hero';
   moduleId: module.id,
   selector: 'hero-search',
   templateUrl: '../views/hero-search.component.html',
-  styleUrls: [ '../assest/css/hero-search.component.css' ],
+  styleUrls: [ '../assets/css/hero-search.component.css' ],
   providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {

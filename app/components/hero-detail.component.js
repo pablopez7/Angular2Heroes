@@ -39,7 +39,7 @@ var HeroDetailComponent = (function () {
             moduleId: module.id,
             selector: 'my-hero-detail',
             templateUrl: '../views/hero-detail.component.html',
-            styleUrls: ['../assest/css/hero-detail.component.css']
+            styleUrls: ['../assets/css/hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
     ], HeroDetailComponent);

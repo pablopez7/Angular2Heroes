@@ -10,6 +10,7 @@ import { RouterModule }  from '@angular/router';
 import { HeroService }          from './services/hero.service';
 
 import { AppComponent }         from './app.component';
+import { HomeComponent }        from './components/home.component';
 import { DashboardComponent }   from './components/dashboard.component';
 import { HeroesComponent }      from './components/heroes.component';
 import { HeroDetailComponent }  from './components/hero-detail.component';
@@ -27,6 +28,10 @@ import { HeroSearchComponent }  from './components/hero-search.component';
         pathMatch: 'full'
       },
       {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
         path: 'dashboard',
         component: DashboardComponent
       },
@@ -42,6 +47,7 @@ import { HeroSearchComponent }  from './components/hero-search.component';
   ],
   declarations: [
     AppComponent,
+    HomeComponent,
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,

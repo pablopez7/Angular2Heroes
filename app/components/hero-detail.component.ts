@@ -9,7 +9,7 @@ import { HeroService } from '../services/hero.service';
   moduleId: module.id,
   selector: 'my-hero-detail',
   templateUrl: '../views/hero-detail.component.html',
-  styleUrls: [ '../assest/css/hero-detail.component.css' ]
+  styleUrls: [ '../assets/css/hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
