@@ -10,7 +10,12 @@ import { RouterModule }  from '@angular/router';
 import { HeroService }          from './services/hero.service';
 
 import { AppComponent }         from './app.component';
+import { IndexComponent }        from './components/index.component';
+import { MenuComponent }        from './components/menu.component';
+import { HeadboardComponent }        from './components/headboard.component';
 import { HomeComponent }        from './components/home.component';
+import { FooterComponent }  from './components/footer.component';
+
 import { DashboardComponent }   from './components/dashboard.component';
 import { HeroesComponent }      from './components/heroes.component';
 import { HeroDetailComponent }  from './components/hero-detail.component';
@@ -24,12 +29,12 @@ import { HeroSearchComponent }  from './components/hero-search.component';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/index',
         pathMatch: 'full'
       },
       {
-        path: 'home',
-        component: HomeComponent
+        path: 'index',
+        component: IndexComponent
       },
       {
         path: 'dashboard',
@@ -47,7 +52,12 @@ import { HeroSearchComponent }  from './components/hero-search.component';
   ],
   declarations: [
     AppComponent,
+    IndexComponent,
+    MenuComponent,
+    HeadboardComponent,
     HomeComponent,
+    FooterComponent,
+
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,

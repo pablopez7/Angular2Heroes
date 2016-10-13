@@ -11,14 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent() {
-        this.title = 'Eminence';
     }
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'home',
-            template: "\n    <h1>{{title}}</h1>\n  ",
-            styleUrls: ['../assets/css/app.component.css']
+            templateUrl: '../views/home.html',
+            styleUrls: ['../assets/css/carousel.css']
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);

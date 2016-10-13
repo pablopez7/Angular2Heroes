@@ -1,0 +1,54 @@
+<!-- MENU -->
+<div class="container">
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" a routerLink="/index" routerLinkActive="active">ÉMINENCE</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="./productos.php">All Products</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="./face.php">Face</a></li>
+							<li><a href="./body.php">Body</a></li>
+							<li><a href="./cosmetics.php">Cosmetics</a></li>
+							<li><a href="./starterSets.php">Starter Sets & Specialty Items</a></li>
+						</ul>
+					</li>
+					<li><a href="./nuestrosClientes.php">Nuestros Clientes</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="./empresaVerde.php">Empresa Verde</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
+							<li class="divider"></li>
+							<li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
+						</ul>
+					</li>
+					<li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+					<li><a routerLink="/heroes" routerLinkActive="active">Heroes</a></li>
+					<li><a routerLink="/headboard" routerLinkActive="active">Headboard</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="./contacto.php">Contacto <span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+</div>
+
+<router-outlet></router-outlet>

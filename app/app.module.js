@@ -16,7 +16,11 @@ var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('./services/hero.service');
 var app_component_1 = require('./app.component');
+var index_component_1 = require('./components/index.component');
+var menu_component_1 = require('./components/menu.component');
+var headboard_component_1 = require('./components/headboard.component');
 var home_component_1 = require('./components/home.component');
+var footer_component_1 = require('./components/footer.component');
 var dashboard_component_1 = require('./components/dashboard.component');
 var heroes_component_1 = require('./components/heroes.component');
 var hero_detail_component_1 = require('./components/hero-detail.component');
@@ -33,12 +37,12 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     {
                         path: '',
-                        redirectTo: '/dashboard',
+                        redirectTo: '/index',
                         pathMatch: 'full'
                     },
                     {
-                        path: 'home',
-                        component: home_component_1.HomeComponent
+                        path: 'index',
+                        component: index_component_1.IndexComponent
                     },
                     {
                         path: 'dashboard',
@@ -56,7 +60,11 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                index_component_1.IndexComponent,
+                menu_component_1.MenuComponent,
+                headboard_component_1.HeadboardComponent,
                 home_component_1.HomeComponent,
+                footer_component_1.FooterComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
