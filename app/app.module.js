@@ -16,6 +16,7 @@ var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('./services/hero.service');
 var app_component_1 = require('./app.component');
+var login_component_1 = require('./components/login.component');
 var index_component_1 = require('./components/index.component');
 var menu_component_1 = require('./components/menu.component');
 var headboard_component_1 = require('./components/headboard.component');
@@ -60,6 +61,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                login_component_1.LoginComponent,
                 index_component_1.IndexComponent,
                 menu_component_1.MenuComponent,
                 headboard_component_1.HeadboardComponent,

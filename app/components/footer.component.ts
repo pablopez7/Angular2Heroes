@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   selector: 'footer',
   template: `
   <div class="container text-center  color1">
-        <div class="col-sm-6 col-md-8">
+        <div class="col-sm-1 col-md-1">
+            <br><br>
+            <login></login>
+        </div>
+        <div class="col-sm-5 col-md-7">
             <address>
                 <h4><strong>Claudia Mendez Cuervo</strong></h4>
                 <h5><mark><u>Mexico Managing Director</u></mark></h5>

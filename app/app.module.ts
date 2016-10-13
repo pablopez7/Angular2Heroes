@@ -10,6 +10,7 @@ import { RouterModule }  from '@angular/router';
 import { HeroService }          from './services/hero.service';
 
 import { AppComponent }         from './app.component';
+import { LoginComponent }        from './components/login.component';
 import { IndexComponent }        from './components/index.component';
 import { MenuComponent }        from './components/menu.component';
 import { HeadboardComponent }        from './components/headboard.component';
@@ -52,6 +53,7 @@ import { HeroSearchComponent }  from './components/hero-search.component';
   ],
   declarations: [
     AppComponent,
+    LoginComponent,
     IndexComponent,
     MenuComponent,
     HeadboardComponent,
