@@ -9,19 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var LogoNombreComponent = (function () {
-    function LogoNombreComponent() {
+var router_1 = require('@angular/router');
+var ProductosComponent = (function () {
+    function ProductosComponent(router) {
+        this.router = router;
     }
-    LogoNombreComponent = __decorate([
+    ProductosComponent.prototype.gotoCategoria = function (categoria) {
+        var link = ['/categoria', categoria.id];
+        this.router.navigate(link);
+    };
+    ProductosComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'logo-nombre',
-            templateUrl: '../views/logo-nombre.html',
+            selector: 'productos',
+            templateUrl: '../views/productos.html',
             styleUrls: ['../assets/css/carousel.css']
         }), 
-        __metadata('design:paramtypes', [])
-    ], LogoNombreComponent);
-    return LogoNombreComponent;
+        __metadata('design:paramtypes', [router_1.Router])
+    ], ProductosComponent);
+    return ProductosComponent;
 }());
-exports.LogoNombreComponent = LogoNombreComponent;
-//# sourceMappingURL=logo-nombre.component.js.map
+exports.ProductosComponent = ProductosComponent;
+//# sourceMappingURL=productos.component.js.map

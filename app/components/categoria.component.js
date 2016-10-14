@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HomeComponent = (function () {
-    function HomeComponent() {
+var CategoriaComponent = (function () {
+    function CategoriaComponent() {
     }
-    HomeComponent = __decorate([
+    CategoriaComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'home',
-            templateUrl: '../views/home.html',
+            selector: 'categoria',
+            templateUrl: '../views/categoria.html',
             styleUrls: ['../assets/css/carousel.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeComponent);
-    return HomeComponent;
+    ], CategoriaComponent);
+    return CategoriaComponent;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.CategoriaComponent = CategoriaComponent;
+//# sourceMappingURL=categoria.component.js.map

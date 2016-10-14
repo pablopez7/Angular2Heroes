@@ -1,0 +1,16 @@
+<h2>Face</h2>
+<br>
+<div class="container marketing">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			<form method="POST" name="CarpetasProductos" id="CarpetasProductos" action="./carpetasProductos.php">
+				<img class="img-circle" src="./'.$carp['ImgUbicacion'].'" alt="'.$carp['Nombre'].'" width="140" height="140">
+				<h4>Nombre</h4>
+				<input style="display: none;" type="text" name="carpeta" id="carpeta" value="'.$carp['Carpeta'].'" />
+				<input style="display: none;" type="text" name="nombre" id="nombre" value="'.$carp['Nombre'].'" />
+				<input style="display: none;" type="text" name="descripcion" id="descripcion" value="'.$carp['Descripcion'].'" />
+				<p><input class="btn btn-default" type="submit" value="Ver Productos »" /></p>
+			</form>
+		</div>
+	</div>
+</div>

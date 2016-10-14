@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'home',
-  templateUrl: '../views/home.html',
+  selector: 'categoria',
+  templateUrl: '../views/categoria.html',
   styleUrls: ['../assets/css/carousel.css']
 })
 
-export class HomeComponent {}
+export class CategoriaComponent {}

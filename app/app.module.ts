@@ -17,6 +17,9 @@ import { HeadboardComponent }        from './components/headboard.component';
 import { HomeComponent }        from './components/home.component';
 import { FooterComponent }  from './components/footer.component';
 
+import { ProductosComponent }  from './components/productos.component';
+import { CategoriaComponent }  from './components/categoria.component';
+
 import { DashboardComponent }   from './components/dashboard.component';
 import { HeroesComponent }      from './components/heroes.component';
 import { HeroDetailComponent }  from './components/hero-detail.component';
@@ -36,6 +39,14 @@ import { HeroSearchComponent }  from './components/hero-search.component';
       {
         path: 'index',
         component: IndexComponent
+      },
+      {
+        path: 'productos',
+        component: ProductosComponent
+      },
+      {
+        path: 'categoria',
+        component: CategoriaComponent
       },
       {
         path: 'dashboard',
@@ -59,6 +70,9 @@ import { HeroSearchComponent }  from './components/hero-search.component';
     HeadboardComponent,
     HomeComponent,
     FooterComponent,
+
+    ProductosComponent,
+    CategoriaComponent,
 
     DashboardComponent,
     HeroDetailComponent,

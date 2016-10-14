@@ -22,6 +22,8 @@ var menu_component_1 = require('./components/menu.component');
 var headboard_component_1 = require('./components/headboard.component');
 var home_component_1 = require('./components/home.component');
 var footer_component_1 = require('./components/footer.component');
+var productos_component_1 = require('./components/productos.component');
+var categoria_component_1 = require('./components/categoria.component');
 var dashboard_component_1 = require('./components/dashboard.component');
 var heroes_component_1 = require('./components/heroes.component');
 var hero_detail_component_1 = require('./components/hero-detail.component');
@@ -46,6 +48,14 @@ var AppModule = (function () {
                         component: index_component_1.IndexComponent
                     },
                     {
+                        path: 'productos',
+                        component: productos_component_1.ProductosComponent
+                    },
+                    {
+                        path: 'categoria',
+                        component: categoria_component_1.CategoriaComponent
+                    },
+                    {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
                     },
@@ -67,6 +77,8 @@ var AppModule = (function () {
                 headboard_component_1.HeadboardComponent,
                 home_component_1.HomeComponent,
                 footer_component_1.FooterComponent,
+                productos_component_1.ProductosComponent,
+                categoria_component_1.CategoriaComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
