@@ -21,6 +21,11 @@ export class ProductoService {
             .catch(this.handleError);
     }
 
+    getProducto(id: number): Promise<Producto> {
+        return this.getProductos()
+            .then(productos => productos.find(producto => producto.id === id));
+    }
+
     create(nombre: string): Promise<Producto> {
         return this.http
             .post(this.productUrl, JSON.stringify({ nombre: nombre }), { headers: this.headers })

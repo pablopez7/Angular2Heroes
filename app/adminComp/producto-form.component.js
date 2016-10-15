@@ -39,7 +39,7 @@ var ProductosFormComponent = (function () {
         this.productoService
             .delete(producto.id)
             .then(function () {
-            _this.productos = _this.productos.filter(function (h) { return h !== producto; });
+            _this.productos = _this.productos.filter(function (p) { return p !== producto; });
             if (_this.selectedProducto === producto) {
                 _this.selectedProducto = null;
             }
@@ -52,7 +52,7 @@ var ProductosFormComponent = (function () {
         this.selectedProducto = producto;
     };
     ProductosFormComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['/detail', this.selectedProducto.id]);
+        this.router.navigate(['/detalle-producto', this.selectedProducto.id]);
     };
     ProductosFormComponent = __decorate([
         core_1.Component({

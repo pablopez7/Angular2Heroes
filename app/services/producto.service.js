@@ -24,6 +24,10 @@ var ProductoService = (function () {
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    ProductoService.prototype.getProducto = function (id) {
+        return this.getProductos()
+            .then(function (productos) { return productos.find(function (producto) { return producto.id === id; }); });
+    };
     ProductoService.prototype.create = function (nombre) {
         return this.http
             .post(this.productUrl, JSON.stringify({ nombre: nombre }), { headers: this.headers })

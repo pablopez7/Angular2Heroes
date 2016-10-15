@@ -26,6 +26,7 @@ var hero_search_component_1 = require('./components/hero-search.component');
 //Admin
 var login_component_1 = require('./adminComp/login.component');
 var producto_form_component_1 = require('./adminComp/producto-form.component');
+var detalle_producto_component_1 = require('./adminComp/detalle-producto.component');
 //Estructura
 var index_component_1 = require('./estructuraComp/index.component');
 var menu_component_1 = require('./estructuraComp/menu.component');
@@ -56,6 +57,10 @@ var AppModule = (function () {
                         component: producto_form_component_1.ProductosFormComponent
                     },
                     {
+                        path: 'detalle-producto/:id',
+                        component: detalle_producto_component_1.DetalleProductoComponent
+                    },
+                    {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
                     },
@@ -78,6 +83,7 @@ var AppModule = (function () {
                 footer_component_1.FooterComponent,
                 login_component_1.LoginComponent,
                 producto_form_component_1.ProductosFormComponent,
+                detalle_producto_component_1.DetalleProductoComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,

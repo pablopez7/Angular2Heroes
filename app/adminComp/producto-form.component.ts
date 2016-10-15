@@ -37,7 +37,7 @@ export class ProductosFormComponent implements OnInit {
     this.productoService
         .delete(producto.id)
         .then(() => {
-          this.productos = this.productos.filter(h => h !== producto);
+          this.productos = this.productos.filter(p => p !== producto);
           if (this.selectedProducto === producto) { this.selectedProducto = null; }
         });
   }
@@ -51,6 +51,6 @@ export class ProductosFormComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedProducto.id]);
+    this.router.navigate(['/detalle-producto', this.selectedProducto.id]);
   }
 }

@@ -1,28 +1,50 @@
+<ul>
+  <li *ngFor="let producto of productos" (click)="onSelect(producto)"
+      [class.selected]="producto === selectedProducto">
+    <span class="badge">{{producto.id}}</span>
+	<img class="second-slide" src="{{producto.directorio}}" alt="Productos"><br>
+    <span>{{producto.directorio}}</span>
+    <span>{{producto.categoria}}</span>
+    <span>{{producto.nombre}}</span>
+    <span>{{producto.status}}</span>
+  </li>
+</ul>
+<div *ngIf="selectedProducto">
+  <h2>
+    {{selectedProducto.nombre | uppercase}}
+  </h2>
+  <div><img class="second-slide" src="{{selectedProducto.directorio}}" alt="Productos"></div>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+
+<!--
 <div class="container">
-	<form action="http://localhost:3030/fileProducto" method="POST" enctype="multipart/form-data">
+	<form #formProductos="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
 		<div class="form-group">
 			<label>Categoria:</label>
-			<input type="text" class="form-control" id="categoria" name="categoria" placeholder="categoria">
+			<input type="text" class="form-control" name="categoria" placeholder="categoria" #categoria="ngForm" ngControl="categoria" [(ngModel)]="newProducto.categoria">
 		</div>
 		<div class="form-group">
 			<label>Nombre:</label>
-			<input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
+			<input type="text" class="form-control" name="nombre" placeholder="nombre" #nombre="ngForm" ngControl="nombre" [(ngModel)]="newProducto.nombre">
 		</div>
 		<div class="form-group">
 			<label>Descripcion:</label>
-			<input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion">
+			<input type="text" class="form-control" name="descripcion" placeholder="descripcion" #descripcion="ngForm" ngControl="descripcion" [(ngModel)]="newProducto.descripcion">
 		</div>
 		<div>
 			<label for="status">Estatus:</label>
-			<select class="form-control" id="status" name="status" ngModel required>
+			<select class="form-control" name="status"  #status="ngForm" ngControl="status" [(ngModel)]="newProducto.status">
             <option value="1" selected>Valido</option> 
             <option value="2">Invalido</option>
         </select>
 		</div>
 		<div class="form-group">
 			<label>Seleccionar Imagen</label>
-			<input type="file" id="img" name="img">
+			<input type="file" name="img" #img="ngForm" ngControl="img" [(ngModel)]="newProducto.img">
 		</div>
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 </div>
+-->
