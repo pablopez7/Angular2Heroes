@@ -14,20 +14,24 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
+//Servicios
 var hero_service_1 = require('./services/hero.service');
+var producto_service_1 = require('./services/producto.service');
+//Principal
 var app_component_1 = require('./app.component');
-var login_component_1 = require('./components/login.component');
-var index_component_1 = require('./components/index.component');
-var menu_component_1 = require('./components/menu.component');
-var headboard_component_1 = require('./components/headboard.component');
-var home_component_1 = require('./components/home.component');
-var footer_component_1 = require('./components/footer.component');
-var productos_component_1 = require('./components/productos.component');
-var categoria_component_1 = require('./components/categoria.component');
 var dashboard_component_1 = require('./components/dashboard.component');
 var heroes_component_1 = require('./components/heroes.component');
 var hero_detail_component_1 = require('./components/hero-detail.component');
 var hero_search_component_1 = require('./components/hero-search.component');
+//Admin
+var login_component_1 = require('./adminComp/login.component');
+var producto_form_component_1 = require('./adminComp/producto-form.component');
+//Estructura
+var index_component_1 = require('./estructuraComp/index.component');
+var menu_component_1 = require('./estructuraComp/menu.component');
+var headboard_component_1 = require('./estructuraComp/headboard.component');
+var home_component_1 = require('./estructuraComp/home.component');
+var footer_component_1 = require('./estructuraComp/footer.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -48,12 +52,8 @@ var AppModule = (function () {
                         component: index_component_1.IndexComponent
                     },
                     {
-                        path: 'productos',
-                        component: productos_component_1.ProductosComponent
-                    },
-                    {
-                        path: 'categoria',
-                        component: categoria_component_1.CategoriaComponent
+                        path: 'producto-form',
+                        component: producto_form_component_1.ProductosFormComponent
                     },
                     {
                         path: 'dashboard',
@@ -71,20 +71,19 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                login_component_1.LoginComponent,
                 index_component_1.IndexComponent,
                 menu_component_1.MenuComponent,
                 headboard_component_1.HeadboardComponent,
                 home_component_1.HomeComponent,
                 footer_component_1.FooterComponent,
-                productos_component_1.ProductosComponent,
-                categoria_component_1.CategoriaComponent,
+                login_component_1.LoginComponent,
+                producto_form_component_1.ProductosFormComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
                 hero_search_component_1.HeroSearchComponent
             ],
-            providers: [hero_service_1.HeroService],
+            providers: [hero_service_1.HeroService, producto_service_1.ProductoService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

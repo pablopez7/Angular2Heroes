@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   selector: 'login',
   templateUrl: '../views/login.html'
 })
+
 export class LoginComponent {}

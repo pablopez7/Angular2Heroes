@@ -6,24 +6,28 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { RouterModule }  from '@angular/router';
 
-
+//Servicios
 import { HeroService }          from './services/hero.service';
+import { ProductoService }          from './services/producto.service';
 
+//Principal
 import { AppComponent }         from './app.component';
-import { LoginComponent }        from './components/login.component';
-import { IndexComponent }        from './components/index.component';
-import { MenuComponent }        from './components/menu.component';
-import { HeadboardComponent }        from './components/headboard.component';
-import { HomeComponent }        from './components/home.component';
-import { FooterComponent }  from './components/footer.component';
-
-import { ProductosComponent }  from './components/productos.component';
-import { CategoriaComponent }  from './components/categoria.component';
-
 import { DashboardComponent }   from './components/dashboard.component';
 import { HeroesComponent }      from './components/heroes.component';
 import { HeroDetailComponent }  from './components/hero-detail.component';
 import { HeroSearchComponent }  from './components/hero-search.component';
+
+//Admin
+import { LoginComponent }        from './adminComp/login.component';
+import { ProductosFormComponent }        from './adminComp/producto-form.component';
+
+//Estructura
+import { IndexComponent }        from './estructuraComp/index.component';
+import { MenuComponent }        from './estructuraComp/menu.component';
+import { HeadboardComponent }        from './estructuraComp/headboard.component';
+import { HomeComponent }        from './estructuraComp/home.component';
+import { FooterComponent }  from './estructuraComp/footer.component';
+
 
 @NgModule({
   imports: [
@@ -41,12 +45,8 @@ import { HeroSearchComponent }  from './components/hero-search.component';
         component: IndexComponent
       },
       {
-        path: 'productos',
-        component: ProductosComponent
-      },
-      {
-        path: 'categoria',
-        component: CategoriaComponent
+        path: 'producto-form',
+        component: ProductosFormComponent
       },
       {
         path: 'dashboard',
@@ -64,22 +64,21 @@ import { HeroSearchComponent }  from './components/hero-search.component';
   ],
   declarations: [
     AppComponent,
-    LoginComponent,
     IndexComponent,
     MenuComponent,
     HeadboardComponent,
     HomeComponent,
     FooterComponent,
 
-    ProductosComponent,
-    CategoriaComponent,
+    LoginComponent,
+    ProductosFormComponent,
 
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,
     HeroSearchComponent
   ],
-  providers: [ HeroService ],
+  providers: [ HeroService, ProductoService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
