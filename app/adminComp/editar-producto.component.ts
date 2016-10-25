@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter }      from '@angular/core';
+import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location }               from '@angular/common';
 
@@ -7,10 +7,10 @@ import { ProductoService } from '../services/producto.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'producto-form',
-  templateUrl: '../views/producto-form.html'
+  selector: 'editar-producto',
+  templateUrl: '../views/editar-producto.html'
 })
-export class ProductosFormComponent implements OnInit {
+export class EditarProductoComponent implements OnInit {
   producto: Producto;
 
   constructor(
@@ -20,15 +20,17 @@ export class ProductosFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this.route.params.forEach((params: Params) => {
+      let id = +params['id'];
+      this.productoService.getProducto(id)
+        .then(producto => this.producto = producto);
+    });
   }
-  
-  @Output() onSubmit = new EventEmitter<any>()
-  todo: string
 
-  public submit(){
-    this.onSubmit.emit(this.todo)
-    this.todo = "";
+  onSubmit(){
+    this.productoService.update(this.producto)
+      .then(() => this.goBack());
+    console.log(this.producto)
   }
 
   save(): void {

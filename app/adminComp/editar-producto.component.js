@@ -12,40 +12,43 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
 var producto_service_1 = require('../services/producto.service');
-var ProductosFormComponent = (function () {
-    function ProductosFormComponent(productoService, route, location) {
+var EditarProductoComponent = (function () {
+    function EditarProductoComponent(productoService, route, location) {
         this.productoService = productoService;
         this.route = route;
         this.location = location;
-        this.onSubmit = new core_1.EventEmitter();
     }
-    ProductosFormComponent.prototype.ngOnInit = function () {
+    EditarProductoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.forEach(function (params) {
+            var id = +params['id'];
+            _this.productoService.getProducto(id)
+                .then(function (producto) { return _this.producto = producto; });
+        });
     };
-    ProductosFormComponent.prototype.submit = function () {
-        this.onSubmit.emit(this.todo);
-        this.todo = "";
+    EditarProductoComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.productoService.update(this.producto)
+            .then(function () { return _this.goBack(); });
+        console.log(this.producto);
     };
-    ProductosFormComponent.prototype.save = function () {
+    EditarProductoComponent.prototype.save = function () {
         var _this = this;
         this.productoService.update(this.producto)
             .then(function () { return _this.goBack(); });
     };
-    ProductosFormComponent.prototype.goBack = function () {
+    EditarProductoComponent.prototype.goBack = function () {
         this.location.back();
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ProductosFormComponent.prototype, "onSubmit", void 0);
-    ProductosFormComponent = __decorate([
+    EditarProductoComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'producto-form',
-            templateUrl: '../views/producto-form.html'
+            selector: 'editar-producto',
+            templateUrl: '../views/editar-producto.html'
         }), 
         __metadata('design:paramtypes', [producto_service_1.ProductoService, router_1.ActivatedRoute, common_1.Location])
-    ], ProductosFormComponent);
-    return ProductosFormComponent;
+    ], EditarProductoComponent);
+    return EditarProductoComponent;
 }());
-exports.ProductosFormComponent = ProductosFormComponent;
-//# sourceMappingURL=producto-form.component.js.map
+exports.EditarProductoComponent = EditarProductoComponent;
+//# sourceMappingURL=editar-producto.component.js.map

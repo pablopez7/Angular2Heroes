@@ -27,6 +27,8 @@ var hero_search_component_1 = require('./components/hero-search.component');
 var login_component_1 = require('./adminComp/login.component');
 var producto_form_component_1 = require('./adminComp/producto-form.component');
 var detalle_producto_component_1 = require('./adminComp/detalle-producto.component');
+var productos_component_1 = require('./productosComp/productos.component');
+var editar_producto_component_1 = require('./adminComp/editar-producto.component');
 //Estructura
 var index_component_1 = require('./estructuraComp/index.component');
 var menu_component_1 = require('./estructuraComp/menu.component');
@@ -53,8 +55,20 @@ var AppModule = (function () {
                         component: index_component_1.IndexComponent
                     },
                     {
+                        path: 'productos',
+                        component: productos_component_1.ProductosComponent
+                    },
+                    {
                         path: 'producto-form',
                         component: producto_form_component_1.ProductosFormComponent
+                    },
+                    {
+                        path: 'editar-producto',
+                        component: editar_producto_component_1.EditarProductoComponent
+                    },
+                    {
+                        path: 'editar-producto/:id',
+                        component: editar_producto_component_1.EditarProductoComponent
                     },
                     {
                         path: 'detalle-producto/:id',
@@ -82,8 +96,10 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 footer_component_1.FooterComponent,
                 login_component_1.LoginComponent,
+                productos_component_1.ProductosComponent,
                 producto_form_component_1.ProductosFormComponent,
                 detalle_producto_component_1.DetalleProductoComponent,
+                editar_producto_component_1.EditarProductoComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,

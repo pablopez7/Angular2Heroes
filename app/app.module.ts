@@ -21,6 +21,8 @@ import { HeroSearchComponent }  from './components/hero-search.component';
 import { LoginComponent }        from './adminComp/login.component';
 import { ProductosFormComponent }        from './adminComp/producto-form.component';
 import { DetalleProductoComponent }        from './adminComp/detalle-producto.component';
+import { ProductosComponent }        from './productosComp/productos.component';
+import { EditarProductoComponent }        from './adminComp/editar-producto.component';
 
 //Estructura
 import { IndexComponent }        from './estructuraComp/index.component';
@@ -46,8 +48,20 @@ import { FooterComponent }  from './estructuraComp/footer.component';
         component: IndexComponent
       },
       {
+        path: 'productos',
+        component: ProductosComponent
+      },
+      {
         path: 'producto-form',
         component: ProductosFormComponent
+      },
+      {
+        path: 'editar-producto',
+        component: EditarProductoComponent
+      },
+      {
+        path: 'editar-producto/:id',
+        component: EditarProductoComponent
       },
       {
         path: 'detalle-producto/:id',
@@ -76,8 +90,10 @@ import { FooterComponent }  from './estructuraComp/footer.component';
     FooterComponent,
 
     LoginComponent,
+    ProductosComponent,
     ProductosFormComponent,
     DetalleProductoComponent,
+    EditarProductoComponent,
 
     DashboardComponent,
     HeroDetailComponent,
