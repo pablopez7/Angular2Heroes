@@ -46,11 +46,6 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 router_1.RouterModule.forRoot([
                     {
-                        path: '',
-                        redirectTo: '/index',
-                        pathMatch: 'full'
-                    },
-                    {
                         path: 'index',
                         component: index_component_1.IndexComponent
                     },
@@ -85,7 +80,11 @@ var AppModule = (function () {
                     {
                         path: 'heroes',
                         component: heroes_component_1.HeroesComponent
-                    }
+                    },
+                    {
+                        path: '',
+                        component: index_component_1.IndexComponent
+                    },
                 ])
             ],
             declarations: [
